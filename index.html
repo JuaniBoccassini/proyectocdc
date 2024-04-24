@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>    
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>Union Homepage</title>
+</head>
+
+<body>
+    <header class="home-header">
+        <div class="nav-container">
+
+            <a href="#" title="Home" aria-label="home" class="logo">
+                <img src="logo.png" alt="">
+            </a>
+
+            <nav>
+                <ul class="nav hide">
+                    <li>
+                        <button>
+                            Servicios
+                            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16">
+                                <path
+                                    d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="dropdown__wrapper">
+                            <div class="dropdown">
+                                <ul class="list-items-with-description">
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 4l-8 4l8 4l8 -4l-8 -4" />
+                                            <path d="M4 12l8 4l8 -4" />
+                                            <path d="M4 16l8 4l8 -4" />
+                                        </svg>
+                                        <div class="item-title" onclick="open.window('envios.html')">
+                                            <h3>Envios</h3>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M3 12h4l3 8l4 -16l3 8h4" />
+                                        </svg>
+                                        <div class="item-title" onclick="window.open('seguimientos.html')">
+                                            <h3>Seguimientos</h3>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="tarifas.html" title="Tarifas">Tarifas</a>
+                    </li>
+                    <li>
+                        <a href="nosotros.html" title="Nosotros">Nosotros</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <button aria-label="Open menu" class="burger-menu" type="button" onclick=showSidebar()>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 8l16 0" />
+                <path d="M4 16l16 0" />
+            </svg>
+        </button>
+
+        <ul class="sidebar">
+            <li onclick=hideSidebar()>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a>
+            </li>
+            <li><a href="#">Servicios</a>
+                <ul>
+                    <li><a href="#">Envios</a></li>
+                    <li><a href="#">Seguimientos</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Tarifas</a>
+            </li>
+            <li>
+                <a href="#">Nosotros</a>
+            </li>
+        </ul>
+
+    </header>
+
+    <section class="main">
+        <div class="animate__animated animate__fadeInDown">
+            <h2><a href="envios.html" class="send-anchor">hacé tu envio</a></h2>
+        </div>
+    </section>
+
+    <main class="parent">
+
+        <div class="div1 hidden">
+            <p>
+                Somos <strong>Union</strong> la empresa de envios que te conecta con lo que quieras.
+            </p>
+        </div>
+        <div class="div2 hidden"> <!--animate__animated animate__fadeInLeft-->
+            <p>
+                Con presencia en 20 <br> de las 23 provincias de nuestro pais. <br> Seguimos creciendo
+            </p>
+            <img src="mapa.png" alt="" style=" height: 450px;">
+        </div>
+        <div class="div3 hidden">  <!--animate__animated animate__fadeInRight-->
+            <p>
+                Nuestra flota es de la mejor calidad <br> Para que no tengas preocupaciones 
+            </p>
+            <img src="logo.png" alt="">
+        </div>
+
+    </main>
+
+    <footer>
+        <h4>Contacto</h4>
+    </footer>
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+
+</html>
