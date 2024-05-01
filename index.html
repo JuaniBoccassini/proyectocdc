@@ -8,21 +8,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>    
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <script defer src="script.js"></script>
     <title>Union Homepage</title>
 </head>
 
 <body>
-    <header class="home-header">
-        <div class="nav-container">
 
-            <a href="#" title="Home" aria-label="home" class="logo">
-                <img src="logo.png" alt="">
+    <header class="header-main">
+        <div class="navbar">
+
+            <a href="#" title="Home" aria-label="home" class="header-logo">
+                <img src="/media/logo.png" alt="">
             </a>
 
             <nav>
-                <ul class="nav hide">
+                <ul class="nav-menu hide">
+
                     <li>
                         <button>
                             Servicios
@@ -34,7 +36,7 @@
                         </button>
                         <div class="dropdown__wrapper">
                             <div class="dropdown">
-                                <ul class="list-items-with-description">
+                                <ul class="dropdown-list-items">
                                     <li>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
@@ -44,7 +46,7 @@
                                             <path d="M4 12l8 4l8 -4" />
                                             <path d="M4 16l8 4l8 -4" />
                                         </svg>
-                                        <div class="item-title" onclick="open.window('envios.html')">
+                                        <div class="item-title" onclick="window.open('/pages/envios.html')">
                                             <h3>Envios</h3>
                                         </div>
                                     </li>
@@ -55,7 +57,7 @@
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                             <path d="M3 12h4l3 8l4 -16l3 8h4" />
                                         </svg>
-                                        <div class="item-title" onclick="window.open('seguimientos.html')">
+                                        <div class="item-title" onclick="window.open('/pages/seguimientos.html')">
                                             <h3>Seguimientos</h3>
                                         </div>
                                     </li>
@@ -63,12 +65,19 @@
                             </div>
                         </div>
                     </li>
+
                     <li>
-                        <a href="tarifas.html" title="Tarifas">Tarifas</a>
+                        <a href="/pages/tarifas.html" title="Tarifas">Tarifas</a>
                     </li>
+
                     <li>
-                        <a href="nosotros.html" title="Nosotros">Nosotros</a>
+                        <a href="/pages/nosotros.html" title="Nosotros">Nosotros</a>
                     </li>
+
+                    <li>
+                        <a href="/pages/contacto.html" title="Contacto">Contacto</a>
+                    </li>
+
                 </ul>
             </nav>
         </div>
@@ -87,64 +96,126 @@
             <li onclick=hideSidebar()>
                 <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a>
             </li>
-            <li><a href="#">Servicios</a>
-                <ul>
-                    <li><a href="#">Envios</a></li>
-                    <li><a href="#">Seguimientos</a></li>
-                </ul>
+            <li>
+                <a href="/pages/envios.html">Envios</a>
             </li>
             <li>
-                <a href="#">Tarifas</a>
+                <a href="/pages/seguimientos.html">Seguimientos</a>
+            </li>
             </li>
             <li>
-                <a href="#">Nosotros</a>
+                <a href="/pages/tarifas.html">Tarifas</a>
+            </li>
+            <li>
+                <a href="/pages/nosotros.html">Nosotros</a>
+            </li>
+            <li>
+                <a href="/pages/contacto.html">Contacto</a>
             </li>
         </ul>
 
     </header>
 
-    <section class="main">
-        <div class="animate__animated animate__fadeInDown">
-            <h2><a href="envios.html" class="send-anchor">hacé tu envio</a></h2>
-        </div>
-    </section>
+    <!-- <nav class="navigation">
+            <ul class="nav-list">
+                <li class="active">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24"
+                            height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                            <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                        </svg>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-heartbeat"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.5 13.572l-7.5 7.428l-2.896 -2.868m-6.117 -8.104a5 5 0 0 1 9.013 -3.022a5 5 0 1 1 7.5 6.572" /><path d="M3 13h2l2 3l2 -6l1 3h3" /></svg>
+                        Activity
+                    </a>
+                </li>
+                <li class="cta-wrapper">
+                    <button class="cta-btn" type="submit">
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-flame"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12c2 -2.96 0 -7 -1 -8c0 3.038 -1.773 4.741 -3 6c-1.226 1.26 -2 3.24 -2 5a6 6 0 1 0 12 0c0 -1.532 -1.056 -3.94 -2 -5c-1.786 3 -2.791 3 -4 2z" /></svg>
+                    </button>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-month"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M7 14h.013" /><path d="M10.01 14h.005" /><path d="M13.01 14h.005" /><path d="M16.015 14h.005" /><path d="M13.015 17h.005" /><path d="M7.01 17h.005" /><path d="M10.01 17h.005" /></svg>
+                        Plans
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-barbell"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 12h1" /><path d="M6 8h-2a1 1 0 0 0 -1 1v6a1 1 0 0 0 1 1h2" /><path d="M6 7v10a1 1 0 0 0 1 1h1a1 1 0 0 0 1 -1v-10a1 1 0 0 0 -1 -1h-1a1 1 0 0 0 -1 1z" /><path d="M9 12h6" /><path d="M15 7v10a1 1 0 0 0 1 1h1a1 1 0 0 0 1 -1v-10a1 1 0 0 0 -1 -1h-1a1 1 0 0 0 -1 1z" /><path d="M18 8h2a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-2" /><path d="M22 12h-1" /></svg>                    Workouts
+                    </a>
+                </li>
+                <div class="active-bar"></div>
+            </ul>
+        </nav> -->
 
-    <main class="parent">
 
-        <div class="div1 hidden">
+    <section class="main-one">
+
+        <div class="div1-one hidden">
             <p>
                 Somos <strong>UNION</strong> la empresa de envios que te conecta con lo que quieras.
             </p>
         </div>
-        <div class="div2 hidden"> <!--animate__animated animate__fadeInLeft-->
+        <div class="div2-one animate__animated animate__fadeInDown">
+            <a href="/pages/envios.html">Hacé tu envio</a>
+            <a href="/pages/seguimientos.html">Rastrea tu envio</a>
+            <a href="/pages/seguimientos.html">Union.Co</a>
+        </div>
+
+    </section>
+
+    <section class="main-two">
+
+        <div class="div1-two hidden"> 
             <p>
                 Con presencia en 20 <br> de las 23 provincias de nuestro pais. <br> Seguimos creciendo
             </p>
-            <img src="mapa.png" alt="" style=" height: 450px;">
+            <img src="/media/mapa.png" alt="" style=" height: 450px;">
         </div>
-        <div class="div3 hidden">  <!--animate__animated animate__fadeInRight-->
+        <div class="div2-two hidden">
             <p>
                 Nuestra flota es de la mejor calidad <br> Para que no tengas preocupaciones 
             </p>
-            <img src="logo.png" alt="">
+            <img src="/media/logo.png" alt="">
         </div>
 
-    </main>
+    </section>
 
     <footer>
-        <h4>Contacto</h4>
+
+        <div class="redes">
+            <h4>Seguinos</h4>
+        </div>
+        <div class="social-media-container">
+            <button class="social-media-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </button>
+            <button class="social-media-button">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+            </button>
+            <button class="social-media-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </button>
+            <button class="social-media-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </button>
+
+            <a href="">Avisos legales</a>
+            <a href="">Aviso de privacidad</a>
+            <a href="">Condiciones de uso</a>
+        </div>
+
     </footer>
 
-    <script>
-        function showSidebar(){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'flex'
-        }
-        function hideSidebar(){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'none'
-        }
-    </script>
 </body>
 
 </html>
