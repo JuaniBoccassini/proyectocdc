@@ -1,3 +1,6 @@
+@import url(/css/tarifas.css);
+
+
 :root {
     --primary: #000000;
     --background: #0f2a42;
@@ -31,10 +34,11 @@ body {
     display: flex;
     justify-content: space-between;
     background: var(--background);
-    height: var(--navbar-height);
+/*     height: var(--navbar-height); */
     padding: 0px 5rem;
+
     align-items: center;
-    z-index: 1;
+    z-index: 100;
 }
 .nav-container {
     display: flex;
@@ -44,19 +48,20 @@ body {
     cursor: pointer;
     display: flex;
     align-items: center;
-    height: 45px;
-    border: 0.1rem #D9981E solid;
-    border-radius: 100%;
+    height: 60px;
+    margin-top: 10px;
+    border: 0.1rem #1ecdd9 solid;
+    /* border-radius: 100%; */
     box-shadow:
     0 0 .2rem #fff,
     0 0 .2rem #fff,
-    0 0 2rem #D9981E,
-    0 0 0.8rem #D9981E,
+    0 0 2rem #1ecdd9,
+    0 0 0.8rem #1ecdd9,
     0 0 2.8rem #260F17,
     inset 0 0 1.3rem #260F17;
     overflow: hidden;
     --animate-delay: 5s;
-    animation: rotateAnimation 7s infinite linear;
+    /* animation: rotateAnimation 7s infinite linear; */
 }
 @keyframes rotateAnimation {
     from {
