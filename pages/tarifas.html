@@ -1,1 +1,114 @@
-<h1>Pagina de tarifas</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/tarfias.css">
+    <title>Union | Tarifas de envio</title>
+</head>
+<body>
+    <header class="home-header">
+        <div class="nav-container">
+
+            <a href="/index.html" title="Home" aria-label="home" class="logo">
+                <img src="/media/img/union20.png" alt="">
+            </a>
+
+            <nav>
+                <ul class="nav hide">
+                    <li>
+                        <button>
+                            Servicios
+                            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16">
+                                <path
+                                    d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="dropdown__wrapper">
+                            <div class="dropdown">
+                                <ul class="list-items-with-description">
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 4l-8 4l8 4l8 -4l-8 -4" />
+                                            <path d="M4 12l8 4l8 -4" />
+                                            <path d="M4 16l8 4l8 -4" />
+                                        </svg>
+                                        <div class="item-title" onclick="open.window('envios.html')">
+                                            <h3>Envios</h3>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M3 12h4l3 8l4 -16l3 8h4" />
+                                        </svg>
+                                        <!--                                         <a class="item-title" href="/pages/seguimientos.html"><h3>Seguimientos</h3></a> -->
+                                        <div class="item-title" onclick="window.open('/pages/seguimientos.html')">
+                                            <h3>Seguimientos</h3>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/pages/tarifas.html" title="Tarifas">Tarifas</a>
+                    </li>
+                    <li>
+                        <a href="/pages/nosotros.html" title="Nosotros">Nosotros</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <h1 class="tarifas">Cotizá y calculá tu tarifa de envios:</h1>
+        <div class="cont-cotizador">
+            <form class="cotizador">
+                <label for="origen">Lugar de origen:</label>
+                <input type="text" required id="origen" name="origen" placeholder="Ingrese el lugar de origen"
+                    class="input">
+                <label for="cporigen">CP:</label>
+                <input type="number" required id="cporigen" name="cporigen" placeholder="Ingrese el código postal"
+                    class="input">
+                <label for="destino">Lugar de destino:</label>
+                <input type="text" required id="destino" name="destino" placeholder="Ingrese el lugar de destino"
+                    class="input">
+                <label for="cpdestino">CP:</label>
+                <input type="number" required id="cpdestino" name="cpdestino" placeholder="Ingrese el código postal"
+                    class="input">
+                <p class="p_radio">Desea pagar en:</p>
+                <div class="contenedor_input_radio">
+                    <div class="input_radio">
+                        <label for="pago1">Origen:</label>
+                        <input type="radio" id="pago1" name="pago">
+                    </div>
+                    <div class="input_radio">
+                        <label for="pago2">Destino:</label>
+                        <input type="radio" id="pago2" name="pago" required>
+                    </div>
+                </div>
+                <label for="cantbultos">cantidad de bultos:</label>
+                <input type="number" id="cantbultos" name="cantbultos" required class="input">
+                <label for="kg">Peso(kg):</label>
+                <input type="number" required id="kg" name="kg" class="input">
+                <div>
+                    <button type="submit" value="Enviar" class="btn_form_tarifas">Enviar</button>
+                    <button type="reset" value="Resetear" class="btn_form_tarifas">Resetear</button>
+                </div>
+            </form>
+        </div>
+        <div class="imgenvios"></div>
+    </section>
+
+
+</body>
+
+</html>
