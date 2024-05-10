@@ -30,25 +30,9 @@ hiddenElements.forEach((el) => observer.observe(el));
 /*Mostrar elementos al scrollear*/
 
 /*Slider Logos*/
-const scrollers = document.querySelectorAll(".scroller")
-
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    addAnimation();
-}
-
-function addAnimation(){
-    scrollers.forEach(scroller => {
-        scroller.setAttribute("data-animated", true);
-    });
-}
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    loop: true,
+});
 /*Slider Logos*/
 
-// const list = document.querySelectorAll(".nav-list li");
-// const nav = document.querySelector(".navigation");
-
-// list.forEach((item) => {
-//   item.addEventListener("click", function (e) {
-//     list.forEach((li) => li.classList.remove("active"));
-//     e.currentTarget.classList.add("active");
-//   });
-// });
