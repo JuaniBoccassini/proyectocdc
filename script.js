@@ -28,3 +28,13 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 /*Mostrar elementos al scrollear*/
+
+/*Desplegar FAQ*/
+const faqs = document.querySelectorAll(".faq")
+
+faqs.forEach(faq => {
+    faq.addEventListener("click", () => {
+        faq.classList.toggle("active")
+    })
+})
+/*Desplegar FAQ*/
