@@ -1,5 +1,8 @@
 @import url(../css/style.css);
 
+.header-main {
+    z-index: 999;
+}
 
 h1.tarifas {
     color: white;
@@ -67,7 +70,7 @@ form>* {
 
 /* imagen */
 .imgenvios {
-    width: 100vw;
+    width: 100%;
     height: 300px;
     background-image: url("/media/img/slide1-e1479392467868-removebg-preview.png");
     background-size: contain;
@@ -149,4 +152,55 @@ form>* {
 
 .btn_form_tarifas:active {
     background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+}
+
+@media (max-width: 992px) {
+
+    .header-main {
+        padding: 1.3rem 5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    :root {
+        font-size: 12px;
+    }
+
+    .header-main {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar {
+        position: absolute;
+        display: none;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 17.7rem;
+        justify-content: center;
+        backdrop-filter: blur(10px);
+        box-shadow:0 .5rem 1rem rgba(0, 0, 0, .1);
+        transition: .3s ease;
+    }
+    
+    #language {
+        display: none;
+    }
+
+    .toggle-btn {
+        display: block;
+    }
+
+    .responsive-menu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .responsive-menu {
+        left: 2rem;
+        width: unset;
+    }
 }

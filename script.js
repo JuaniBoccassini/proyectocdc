@@ -28,11 +28,3 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 /*Mostrar elementos al scrollear*/
-
-/*Slider Logos*/
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    loop: true,
-});
-/*Slider Logos*/
-

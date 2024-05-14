@@ -522,10 +522,9 @@ body {
 /*----------Footer Section----------*/
 .footer {
     display: flex;
+    flex-wrap: wrap;
+    text-align: center;
     margin-top: 80px;
-}
-
-.footer {
     border-top: 1px solid white;
 }
 
@@ -600,13 +599,13 @@ body {
 }
 
 footer a {
+    display: flex;
+    align-self: flex-end;
+    flex-wrap: wrap;
     color: var(--white);
     font-size: small;
-    align-self: flex-end;
     padding: 0 20px 30px 100px;
     text-decoration: none;
-    display: flex;
-    flex-wrap: wrap;
 }
 /*----------Footer Section----------*/
 
