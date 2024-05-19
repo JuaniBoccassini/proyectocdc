@@ -76,7 +76,7 @@ form>* {
     margin: 60px 0px;
 }
 
-.input {
+.input, #metodoDePago {
     border-radius: 10px;
     outline: 2px solid #1ecdd9;
     border: 0;
@@ -89,10 +89,21 @@ form>* {
     transition: 0.25s;
     box-shadow: 1px 1px 0px rgb(183, 183, 183);
 }
-
-.input:focus {
+#metodoDePago{
+    padding: 3px;
+    margin-left: 40px;
+}
+.input:focus, #metodoDePago:focus {
     outline-offset: 5px;
-    background-color: transparent
+    background-color: transparent;
+}
+#metodoDePago:focus{
+    color:#020b10;
+    font-size:1rem;
+}
+.adjImg{
+    font-size: 1.5rem;
+    border-radius: 10px;
 }
 /* boton formulario */
 .btn_form_tarifas {
@@ -149,5 +160,12 @@ form>* {
 
 .btn_form_tarifas:active {
     background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+}
+
+.tamañoAlertSweet{
+    height:80% !important;
+    width: 400px !important;
+    border-radius: 5% !important;
+    border: solid 3px #1b0366 !important;
 }
 

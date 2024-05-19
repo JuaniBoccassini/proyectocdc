@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/tarifas.css">
     <title>Union | Tarifas de envio</title>
 </head>
+
 <body>
     <header class="home-header">
         <div class="nav-container">
@@ -95,12 +96,26 @@
                         <input type="radio" id="pago2" name="pago" required>
                     </div>
                 </div>
+                <div>
+                    <label class="metodo_pago" for="metodoDePago">Metodo de pago:</label>
+                    <div>
+                        <select class="input" name="metodoDePago" id="metodoDePago">
+                            <option value="efectivo">Efectivo</option>
+                            <option value="transferencia">Transferencia</option>
+                            <option value="tarjeta">Tarjeta</option>
+                        </select>
+                    </div>
+
+                </div>
+                <label for="imgPaquete">Adjunta una imagen de tu paquete:</label>
+                <input type="file" id="imagenPaquete" name="imgPaquete" class="adjImg">
                 <label for="cantbultos">cantidad de bultos:</label>
                 <input type="number" id="cantbultos" name="cantbultos" required class="input">
                 <label for="kg">Peso(kg):</label>
                 <input type="number" required id="kg" name="kg" class="input">
+
                 <div>
-                    <button type="submit" value="Enviar" class="btn_form_tarifas">Enviar</button>
+                    <button type="submit" id="btnEnviarForm" value="Enviar" class="btn_form_tarifas">Enviar</button>
                     <button type="reset" value="Resetear" class="btn_form_tarifas">Resetear</button>
                 </div>
             </form>
@@ -108,7 +123,10 @@
         <div class="imgenvios"></div>
     </section>
 
-
+    <!-- sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- JSS -->
+    <script src="../script.js"></script>
 </body>
 
 </html>
