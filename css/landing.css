@@ -4,8 +4,9 @@
     --bs-body-bg: #fbf0f6;
 }
 
+/*----------Primera Seccion----------*/
 html{
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /*Propiedad para que la navegacion en toda la pagina web sea mas suave*/
 }
 
 .body {
@@ -117,6 +118,7 @@ html{
       opacity: 0;
     }
 }
+/*----------Primera Seccion----------*/
 
 .steps {
     padding-top: 40px;

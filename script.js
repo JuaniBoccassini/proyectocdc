@@ -39,7 +39,7 @@ faqs.forEach(faq => {
 })
 /*Desplegar FAQ*/
 
-/*Validacion formu*/
+/*Validacion formulario tarifas*/
 let btnEnviarForm = document.querySelector("#btnEnviarForm")
 btnEnviarForm.addEventListener("click", (event) => {
     event.preventDefault();
@@ -87,4 +87,4 @@ btnEnviarForm.addEventListener("click", (event) => {
         })
     }
 })
-/*Validacion formu*/
+/*Validacion formulario tarifas*/

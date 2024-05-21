@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/favicon" href="/media/img/logo.ico" sizes="256x256"> 
+    <link rel="icon" type="image/favicon" href="/media/img/logo.ico" sizes="256x256">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/nosotros.css">
-    <script defer src="script.js"></script>
+    <script defer src="/script.js"></script>
     <title>Union | Nosotros</title>
 </head>
 <body>
 
-    <header class="header-main d-flex">
-
-        <a href="/index.html" title="Home" aria-label="home" class="header-logo">
-            <img src="/media/img/logo.png" alt="">
+    <header class="header-main">
+        <a href="/index.html" title="Inicio" aria-label="Inicio" class="header-logo">
+            <img src="/media/img/logo.png" alt="Inicio">
         </a>
 
-        <div class="navbar my-2">
-            <ul class="links my-2 fs-1">
-                <li>
+        <div class="navbar ">
+            <ul class="links my-0 px-0">
+                <li >
                     <button>
                         Servicios
                         <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16">
@@ -34,17 +35,17 @@
                     </button>
                         <div class="dropdown__wrapper">
                         <div class="dropdown">
-                            <ul class="dropdown-list-items px-1">
+                            <ul class="dropdown-list-items px-0">
                                 <li>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path fill="#000000" d="m221.76 69.66l-88-48.18a12 12 0 0 0-11.52 0l-88 48.18A12 12 0 0 0 28 80.18v95.64a12 12 0 0 0 6.24 10.52l88 48.18a11.95 11.95 0 0 0 11.52 0l88-48.18a12 12 0 0 0 6.24-10.52V80.18a12 12 0 0 0-6.24-10.52M126.08 28.5a3.94 3.94 0 0 1 3.84 0L216.67 76L178.5 96.89a4 4 0 0 0-.58-.4l-88-48.18Zm1.92 96L39.33 76l42.23-23.13l88.67 48.54Zm-89.92 54.8a4 4 0 0 1-2.08-3.5V83.29l88 48.16v94.91Zm179.84 0l-85.92 47v-94.85l40-21.89V152a4 4 0 0 0 8 0v-46.82l40-21.89v92.53a4 4 0 0 1-2.08 3.5Z"/></svg>
                                     <div class="item-title" onclick="window.open('/pages/envios.html')">
-                                        <h3 class="my-0 mx-0 fw-normal">Envios</h3>
+                                        <h3 class="my-0">Envios</h3>
                                     </div>
                                 </li>
                                 <li>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M7.985 13.23c-.014.312-.047.619-.047.934a19.97 19.97 0 0 0 32.124 15.87Zm15.905 8.332l1.32-2.303"/><path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M24.31 33.83S24 37.99 27.2 43.5H10.07a89 89 0 0 0 5.071-13.969M39.03 15.654a12.813 12.813 0 0 0-18.233-9.9"/><path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M35.517 16.11a9.27 9.27 0 0 0-13.19-7.161"/><path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M32.004 16.567a5.725 5.725 0 0 0-8.146-4.423"/><circle cx="25.744" cy="18.328" r="1.077" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                     <div class="item-title" onclick="window.open('/pages/seguimientos.html')">
-                                        <h3 class="my-0 mx-0 fw-normal">Seguimiento</h3>
+                                        <h3 class="my-0">Seguimiento</h3>
                                     </div>
                                 </li>
                             </ul>
@@ -59,45 +60,284 @@
                 <li>
                     <a href="/pages/nosotros.html" title="Nosotros">Nosotros</a>
                 </li>
-
-                <li>
-                    <a href="/pages/contacto.html" title="Contacto">Contacto</a>
-                </li>
             </ul>
 
         </div>
 
-        <h4 id="language" style="color: white; font-size: 16px; font-weight: 100;">ES - EN</h4>
-
         <div class="toggle-btn">
-            <i class="fa-solid fa-bars" style="color: #fafafa;"></i>        
+            <i class="fa-solid fa-bars"></i>
         </div>
 
         <div class="responsive-menu">
+            <li>
+                <a href="/index.html" title="Inicio">Inicio</a>
+            </li>
             <li>
                 <a href="/pages/envios.html" title="Envios">Envios</a>
             </li>
             <li>
                 <a href="/pages/seguimientos.html" title="Seguimiento">Seguimiento</a>
-            </li> 
+            </li>
             <li>
                 <a href="/pages/tarifas.html" title="Tarifas">Tarifas</a>
             </li>
             <li>
                 <a href="/pages/nosotros.html" title="Nosotros">Nosotros</a>
             </li>
-            <li>
-                <a href="/pages/contacto.html" title="Contacto">Contacto</a>
-            </li>
-            <li>
-                <h4 style="font-size: 16px; font-weight: 100;">ES - EN</h4>
-            </li>
         </div>
-
-
     </header>
 
-    <!-- <footer class="footer border-highlight">
+    <main>
+        <section class="main-section">
+            <div class="w-100 d-flex justify-content-evenly align-items-center flex-wrap hidden">
+                <div class="d-md-flex flex-column align-items-center">
+                    <h3 class="text-white">Nuestra flota</h3>
+                    <p class="text-white text-center">Desde motocicletas ágiles para entregas rápidas en la ciudad, camiones espaciosos para cargas voluminosas, hasta aviones para envíos con gran cantidad de paquetes, contamos con la variedad y calidad necesarias para garantizar que tus paquetes lleguen siempre a tiempo y en perfectas condiciones.</p>
+                </div>
+                <div id="carouselExampleCaptions" class="carousel slide d-md-flex">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="/media/img/moto.jpg" class="d-block w-100 c-img" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <p>Distancias cortas para pedidos chicos a medianos.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/media/img/camiones.jpg" class="d-block w-100 c-img" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <p>Distancias medias y largas para pedidos chicos a grandes.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/media/img/avion.jpg" class="d-block w-100 c-img" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <p>Distancias largas para pedidos medianos a grandes.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="equipo row d-flex flex-column text-center hidden">
+                <div class="col">
+                    <h3 class="text-white">Nuestro equipo</h3>
+                </div>
+                <div class="col">
+                    <img src="/media/img/logo.png" class="img" alt="">
+                </div>
+            </div>
+            <div class="transport-main3 py-0 hidden">
+                <article>
+                    <figure class="align-content-center text-center">
+                        <img class="user-img" src="/media/img/user.svg" alt="">
+                    </figure>
+                    <div class="photo-preview">
+                        <h2>Gaston Cuello - CEO</h2>
+                    </div>
+                </article>
+                <article>
+                    <figure class="align-content-center text-center">
+                        <img class="user-img" src="/media/img/user.svg" alt="">
+                    </figure>
+                    <div class="photo-preview">
+                        <h2>Esteban Romero - Account Manager</h2>
+                    </div>
+                </article>
+                <article>
+                    <figure class="align-content-center text-center">
+                        <img class="user-img" src="/media/img/user.svg" alt="">
+                    </figure>
+                    <div class="photo-preview">
+                        <h2>Yoan Sanchez - Chief Logistic</h2>
+                    </div>
+                </article>
+                <article>
+                    <figure class="align-content-center text-center">
+                        <img class="user-img" src="/media/img/user.svg" alt="">
+                    </figure>
+                    <div class="photo-preview">
+                        <h2>Juan Ignacio Boccassini - Head of Design</h2>
+                    </div>
+                </article>
+            </div>
+
+            <div class="row mx-5 d-flex flex-column align-items-center hidden">
+                <div class="contact-form col text-white d-flex flex-column align-items-center">
+                    <h3 class="text-center pb-3 pt-5">Contactanos</h3>
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-md-4 input-group-sm">
+                          <label for="validationCustom01" class="form-label text-white fs-6">Nombre</label>
+                          <input type="text" class="form-control" id="validationCustom01" value="" required>
+                        </div>
+                        <div class="col-md-4 input-group-sm">
+                          <label for="validationCustom02" class="form-label text-white fs-6">Apellido</label>
+                          <input type="text" class="form-control" id="validationCustom02" value="" required>
+                        </div>
+                        <div class="col-md-4 input-group-sm">
+                          <label for="validationCustomUsername" class="form-label text-white fs-6">Correo</label>
+                          <div class="input-group has-validation input-group-sm">
+                            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                          </div>
+                        </div>
+                        <div class="col-md-6 input-group-sm">
+                          <label for="validationCustom03" class="form-label text-white fs-6">Telefono</label>
+                          <input type="text" class="form-control" id="validationCustom03" required>
+                          <div class="invalid-feedback">
+                            Ingrese un numero valido.
+                          </div>
+                        </div>
+                        <div class="col-md-3 input-group-sm">
+                          <label for="validationCustom04" class="form-label text-white fs-6">Provincia</label>
+                          <select class="form-select" id="validationCustom04" required>
+                            <option selected disabled value="">Selecciona</option>
+                            <option>Buenos Aires</option>
+                            <option>Ciudad Autónoma de Buenos Aires</option>
+                            <option>Catamarca</option>
+                            <option>Chaco</option>
+                            <option>Chubut</option>
+                            <option>Córdoba</option>
+                            <option>Corrientes</option>
+                            <option>Entre Ríos</option>
+                            <option>Formosa</option>
+                            <option>Jujuy</option>
+                            <option>La Pampa</option>
+                            <option>La Rioja</option>
+                            <option>Misiones</option>
+                            <option>Neuquén</option>
+                            <option>Río Negro</option>
+                            <option>Salta</option>
+                            <option>San Juan</option>
+                            <option>San Luis</option>
+                            <option>Santa Cruz</option>
+                            <option>Santa Fe</option>
+                            <option>Santiago del Estero</option>
+                            <option>Tierra del Fuego, Antártida e Islas del Atlántico Sur</option>
+                            <option>Tucumán</option>
+                          </select>
+                        </div>
+                        <div class="col-md-3 input-group-sm">
+                          <label for="validationCustom05" class="form-label text-white fs-6">Código postal</label>
+                          <input type="text" class="form-control" id="validationCustom05" required>
+                          <div class="invalid-feedback">
+                            Ingrese un codigo postal valido.
+                          </div>
+                        </div>
+                        <div class="form-floating">
+                            <textarea class="form-control fs-6" placeholder="Leave a comment here" id="floatingTextarea2"></textarea>
+                            <label for="floatingTextarea2">Tu mensaje</label>
+                          </div>
+                        <div class="col-12 d-flex flex-row justify-content-between">
+                          <div class="form-check align-content-center">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label text-white" for="invalidCheck">
+                              Aceptar terminos y condiciones.
+                            </label>
+                            <div class="invalid-feedback text-white">
+                                Leer y aceptar antes de enviar.
+                            </div>
+                          </div>
+                          <div class="text-center">
+                            <button class="btn btn-primary" type="submit">Enviar</button>
+                          </div>
+                        </div>
+                      </form>
+                </div>
+
+                <div class="col mt-5 text-white d-flex flex-column align-items-center hidden">
+                    <div class="pb-3 pt-5">
+                        <h3>Preguntas Frecuentes</h3>
+                    </div>
+                    <div class="faq">
+                        <div class="question">
+                            <h3>¿Como se realiza un envio?</h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="#ffffff" d="M12 14.308L8.192 10.5h7.616z"/>
+                            </svg>
+                        </div>
+                        <div class="answer">
+                            <p>Para realizar un envio lo que tenes que realizar es ir a la seccion de <strong>Envios</strong> desde la solapa Servicios. Una vez obtengas el <strong>Codigo de Envio</strong> que se te asignará, podes acercarte a una de nuestras sucursales para despachar tu pedido.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq">
+                        <div class="question">
+                            <h3>¿Cuanto cuesta realizar un envio?</h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="#ffffff" d="M12 14.308L8.192 10.5h7.616z"/>
+                            </svg>
+                        </div>
+                        <div class="answer">
+                            <p>Tenemos diferentes tarifas segun el peso de lo que desees enviar y que tan lejos se encuentre el destino. No te preocupes, desde la seccion <strong>Tarifas</strong> vas a poder obtener toda la informacion sobre costos.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq">
+                        <div class="question">
+                            <h3>¿Puedo hacer el seguimiento de pedido?</h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="#ffffff" d="M12 14.308L8.192 10.5h7.616z"/>
+                            </svg>
+                        </div>
+                        <div class="answer">
+                            <p>¡Si! Tenes que ingresar a la seccion <strong>Seguimiento</strong>, una vez alli tenes que ingresar los datos de tu pedido incluyendo el <strong>Codigo de envio</strong>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq">
+                        <div class="question">
+                            <h3>¿Cuanto debo esperar para recibir mi pedido?</h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="#ffffff" d="M12 14.308L8.192 10.5h7.616z"/>
+                            </svg>
+                        </div>
+                        <div class="answer">
+                            <p>Depende la distancia en la que se encuentre el destino. Tambien tenemos diferentes tipos de transporte segun tus necesidades.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq">
+                        <div class="question">
+                            <h3>¿Que tipo de envios puedo realizar?</h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="#ffffff" d="M12 14.308L8.192 10.5h7.616z"/>
+                            </svg>
+                        </div>
+                        <div class="answer">
+                            <p>Realizamos envios de todo tipo, desde documentos importantes hasta paquetes voluminosos a cualquier provincia del pais. Desde la seccion <strong>Envios</strong> podras visulizar toda la informacion sobre el tipo de envio y la modalidad de transporte.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq">
+                        <div class="question">
+                            <h3>¿Como retiro un pedido?</h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="#ffffff" d="M12 14.308L8.192 10.5h7.616z"/>
+                            </svg>
+                        </div>
+                        <div class="answer">
+                            <p>Para retirar un pedido en alguna de nuestras sucursales tenes que presentar el numero de <strong>PIN</strong> vinculado al <strong>Codigo de Envio</strong> del pedido realizado. Una vez presentado esto, se validara el origen del pedido para que lo puedas retirar.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer border-highlight">
 
         <div class="social-media-container">
             <div>
@@ -120,24 +360,27 @@
         <a href="">Avisos legales</a>
         <a href="">Aviso de privacidad</a>
         <a href="">Condiciones de uso</a>
-        
-    </footer> -->
+    </footer>
 
     <script>
-        /*Mostrar Menu Responsivo*/ 
-        const toggleBtn = document.querySelector(".toggle-btn")
-        const toggleBtnIcon = document.querySelector(".toggle-btn i")
-        const responsiveMenu = document.querySelector(".responsive-menu")
+        /*Validacion formulario contacto*/
+        (() => {
+            'use strict'
 
-        toggleBtn.onclick = function(){
-        responsiveMenu.classList.toggle("open")
-        const isOpen = responsiveMenu.classList.contains("open")
+            const forms = document.querySelectorAll('.needs-validation')
 
-        toggleBtnIcon.classList = isOpen
-        ? "fa-solid fa-xmark"
-        : "fa-solid fa-bars"
-        }
-        /*Mostrar Menu Responsivo*/
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+        /*Validacion formulario contacto*/
     </script>
 </body>
 </html>

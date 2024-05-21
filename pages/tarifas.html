@@ -5,20 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/tarifas.css">
-    <title>Union | Tarifas de envio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/favicon" href="/media/img/logo.ico" sizes="256x256">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script defer src="/script.js"></script>
+    <title>Union | Tarifas</title>
 </head>
 
 <body>
 
     <header class="header-main">
-
         <a href="/index.html" title="Home" aria-label="home" class="header-logo">
             <img src="/media/img/logo.png" alt="">
         </a>
 
-        <div class="navbar">
-            <ul class="links">
-                <li>
+        <div class="navbar ">
+            <ul class="links my-0 px-0">
+                <li >
                     <button>
                         Servicios
                         <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16">
@@ -29,17 +38,17 @@
                     </button>
                         <div class="dropdown__wrapper">
                         <div class="dropdown">
-                            <ul class="dropdown-list-items">
+                            <ul class="dropdown-list-items px-0">
                                 <li>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path fill="#000000" d="m221.76 69.66l-88-48.18a12 12 0 0 0-11.52 0l-88 48.18A12 12 0 0 0 28 80.18v95.64a12 12 0 0 0 6.24 10.52l88 48.18a11.95 11.95 0 0 0 11.52 0l88-48.18a12 12 0 0 0 6.24-10.52V80.18a12 12 0 0 0-6.24-10.52M126.08 28.5a3.94 3.94 0 0 1 3.84 0L216.67 76L178.5 96.89a4 4 0 0 0-.58-.4l-88-48.18Zm1.92 96L39.33 76l42.23-23.13l88.67 48.54Zm-89.92 54.8a4 4 0 0 1-2.08-3.5V83.29l88 48.16v94.91Zm179.84 0l-85.92 47v-94.85l40-21.89V152a4 4 0 0 0 8 0v-46.82l40-21.89v92.53a4 4 0 0 1-2.08 3.5Z"/></svg>
                                     <div class="item-title" onclick="window.open('/pages/envios.html')">
-                                        <h3>Envios</h3>
+                                        <h3 class="my-0">Envios</h3>
                                     </div>
                                 </li>
                                 <li>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M7.985 13.23c-.014.312-.047.619-.047.934a19.97 19.97 0 0 0 32.124 15.87Zm15.905 8.332l1.32-2.303"/><path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M24.31 33.83S24 37.99 27.2 43.5H10.07a89 89 0 0 0 5.071-13.969M39.03 15.654a12.813 12.813 0 0 0-18.233-9.9"/><path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M35.517 16.11a9.27 9.27 0 0 0-13.19-7.161"/><path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M32.004 16.567a5.725 5.725 0 0 0-8.146-4.423"/><circle cx="25.744" cy="18.328" r="1.077" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                     <div class="item-title" onclick="window.open('/pages/seguimientos.html')">
-                                        <h3>Seguimiento</h3>
+                                        <h3 class="my-0">Seguimiento</h3>
                                     </div>
                                 </li>
                             </ul>
@@ -54,45 +63,34 @@
                 <li>
                     <a href="/pages/nosotros.html" title="Nosotros">Nosotros</a>
                 </li>
-
-                <li>
-                    <a href="/pages/contacto.html" title="Contacto">Contacto</a>
-                </li>
             </ul>
 
         </div>
 
-        <h4 id="language" style="color: white; font-size: 16px; font-weight: 100;">ES - EN</h4>
-
         <div class="toggle-btn">
-            <i class="fa-solid fa-bars" style="color: #fafafa;"></i>        
+            <i class="fa-solid fa-bars"></i>
         </div>
 
         <div class="responsive-menu">
+            <li>
+                <a href="/index.html" title="Inicio">Inicio</a>
+            </li>
             <li>
                 <a href="/pages/envios.html" title="Envios">Envios</a>
             </li>
             <li>
                 <a href="/pages/seguimientos.html" title="Seguimiento">Seguimiento</a>
-            </li> 
+            </li>
             <li>
                 <a href="/pages/tarifas.html" title="Tarifas">Tarifas</a>
             </li>
             <li>
                 <a href="/pages/nosotros.html" title="Nosotros">Nosotros</a>
             </li>
-            <li>
-                <a href="/pages/contacto.html" title="Contacto">Contacto</a>
-            </li>
-            <li>
-                <h4 style="font-size: 16px; font-weight: 100;">ES - EN</h4>
-            </li>
         </div>
-
-
     </header>
 
-    <section>
+    <section class="hidden">
         <h1 class="tarifas">Cotizá y calculá tu tarifa de envios:</h1>
         <div class="cont-cotizador">
             <form class="cotizador">
@@ -145,6 +143,32 @@
         </div>
         <div class="imgenvios"></div>
     </section>
+
+    <footer class="footer border-highlight">
+
+        <div class="social-media-container">
+            <div>
+                <h4>Seguinos</h4>
+            </div>
+            <button class="social-media-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </button>
+            <button class="social-media-button">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+            </button>
+            <button class="social-media-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </button>
+            <button class="social-media-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </button>
+        </div>
+
+        <a href="">Avisos legales</a>
+        <a href="">Aviso de privacidad</a>
+        <a href="">Condiciones de uso</a>
+    </footer>
+
 
     <!-- sweet alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

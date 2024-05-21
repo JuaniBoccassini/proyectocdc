@@ -1,1 +1,72 @@
 @import url(style.css);
+
+* {
+    font-family: "Readex Pro", sans-serif;
+}
+
+.main-section {
+    padding: 6rem;
+}
+
+.carousel {
+    width: 600px;
+}
+
+.carousel-inner {
+    border-radius: 20px;
+}
+
+.c-img {
+    height: 400px;
+    width: 400px;
+    opacity: .7;
+}
+
+.img {
+    height: 150px;
+}
+
+.equipo {
+    margin-top: 7rem;
+}
+
+.transport-main3 {
+    margin-top: 0;
+}
+
+.user-img {
+    height: 220px;
+}
+
+.contact-form{
+    width: 80%;
+}
+
+#floatingTextarea2 {
+    height: 100px
+}
+/*----------Media Queries----------*/
+
+/* @media (min-width: 1400px) {
+    .main-section {
+        font-size: 1.7rem;
+    }
+}
+@media (min-width: 1200px) {
+    .main-section { width: 1140px; }
+}
+  
+@media (min-width: 1400px) {
+    .main-section { width: 1340px; }
+}
+  
+@media (min-width: 1600px) {
+    .main-section { width: 1520px; }
+}
+@media (min-width: 544px) {
+    .steps {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+} */
+/*----------Media Queries----------*/
