@@ -193,8 +193,8 @@ form>* {
         box-shadow:0 .5rem 1rem rgba(0, 0, 0, .1);
         transition: .3s ease;
     }
-    
-    #language {
+
+    .navbar .links {
         display: none;
     }
 

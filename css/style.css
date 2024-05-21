@@ -773,10 +773,6 @@ select {
         box-shadow:0 .5rem 1rem rgba(0, 0, 0, .1);
         transition: .3s ease;
     }
-    
-    #language {
-        display: none;
-    }
 
     .toggle-btn {
         display: block;
@@ -785,24 +781,12 @@ select {
     .responsive-menu {
         display: block;
     }
-
-    .div2-one {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    .div2-one > a {
-        gap: 0;
-        text-align: center;
-    }
-
 }
 
 @media screen and (max-width: 576px) {
     .responsive-menu {
         left: 2rem;
-        width: unset;
+        
     }
 }
 /*----------Media Queries----------*/
