@@ -16,21 +16,24 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
+/* Verificacion de formulario */
 let btnEnviarForm = document.querySelector("#btnEnviarForm")
 btnEnviarForm.addEventListener("click", (event) => {
     event.preventDefault();
+    //seleccionando input
     let origen = document.querySelector("#origen").value 
     let cporigen = document.querySelector("#cporigen").value
     let destino = document.querySelector("#destino").value
     let cpdestino = document.querySelector("#cpdestino").value
     let cantbultos = document.querySelector("#cantbultos").value
     let kg = document.querySelector("#kg").value
-    // Verificar radio buttons
+    // Seleccinando radio buttons
     let pago1 = document.querySelector("#pago1").checked;
     let pago2 = document.querySelector("#pago2").checked;
     /* select */
     let metodoDePago = document.querySelector("#metodoDePago").value;
 
+    //si los campos estan vacios sweet alert de error
     if(origen == "" || cporigen == "" || destino == "" || cpdestino == "" || cantbultos == "" || kg == "" || (!pago1 && !pago2) || metodoDePago === ""){
         Swal.fire({
             icon: 'error',
@@ -46,6 +49,7 @@ btnEnviarForm.addEventListener("click", (event) => {
                 popup: 'tamañoAlertSweet',
             }
         })
+        //si los campos estan completos sweet alert de aprobacion
     } else{
         Swal.fire({
             icon: 'success',

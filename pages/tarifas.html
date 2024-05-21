@@ -72,6 +72,7 @@
     <section>
         <h1 class="tarifas">Cotizá y calculá tu tarifa de envios:</h1>
         <div class="cont-cotizador">
+            <!-- Formulario para cotizar el envio -->
             <form class="cotizador">
                 <label for="origen">Lugar de origen:</label>
                 <input type="text" required id="origen" name="origen" placeholder="Ingrese el lugar de origen"
@@ -85,6 +86,7 @@
                 <label for="cpdestino">CP:</label>
                 <input type="number" required id="cpdestino" name="cpdestino" placeholder="Ingrese el código postal"
                     class="input">
+                    <!-- Radio para seleccionar donde se abona -->
                 <p class="p_radio">Desea pagar en:</p>
                 <div class="contenedor_input_radio">
                     <div class="input_radio">
@@ -96,6 +98,7 @@
                         <input type="radio" id="pago2" name="pago" required>
                     </div>
                 </div>
+                <!-- selector de medio de pago -->
                 <div>
                     <label class="metodo_pago" for="metodoDePago">Metodo de pago:</label>
                     <div>
@@ -105,15 +108,15 @@
                             <option value="tarjeta">Tarjeta</option>
                         </select>
                     </div>
-
                 </div>
+                <!-- Img del paquete -->
                 <label for="imgPaquete">Adjunta una imagen de tu paquete:</label>
                 <input type="file" id="imagenPaquete" name="imgPaquete" class="adjImg">
                 <label for="cantbultos">cantidad de bultos:</label>
                 <input type="number" id="cantbultos" name="cantbultos" required class="input">
                 <label for="kg">Peso(kg):</label>
                 <input type="number" required id="kg" name="kg" class="input">
-
+                <!-- Botones -->
                 <div>
                     <button type="submit" id="btnEnviarForm" value="Enviar" class="btn_form_tarifas">Enviar</button>
                     <button type="reset" value="Resetear" class="btn_form_tarifas">Resetear</button>
