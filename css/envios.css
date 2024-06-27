@@ -257,15 +257,15 @@ h1.tarifas {
     }
 }
 
-@import url(/css/style.css);
+
+/****** COPIA ******/
+/* @import url(/css/style.css);
 
 * {
     font-family: "Readex Pro", sans-serif;
 }
 
-/****** COPIA ******/
-
-/* .header-main {
+.header-main {
     z-index: 999;
 }
 
@@ -473,5 +473,4 @@ form>* {
         width: unset;
     }
 } */
-
 /****** COPIA ******/

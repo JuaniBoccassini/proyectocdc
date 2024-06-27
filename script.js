@@ -46,10 +46,11 @@ sendBtn.addEventListener("click", (event) => {
     event.preventDefault();
     const validateOrg = document.getElementById("validateOrg").value;
     const validateDest = document.getElementById("validateDest").value;
-    const payment = document.getElementById("payment").checked;
+    const payment1 = document.getElementById("payment1").checked;
+    const payment2 = document.getElementById("payment2").checked;
     const payMethod = document.getElementById("payMethod").value;
 
-    if (validateOrg === "" || validateDest === "" || payMethod === "" || !payment) {
+    if (validateOrg === "" || validateDest === "" || payMethod === "" || (!payment1 && !payment2)) {
         Swal.fire({
             icon: 'error',
             html: `
