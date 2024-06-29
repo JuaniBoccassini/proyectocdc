@@ -4,6 +4,11 @@
     font-family: "Readex Pro", sans-serif;
 }
 
+.nav {
+    margin: 50px 230px 0;
+    gap: 15px;
+}
+
 h1.tarifas {
     color: white;
     margin: 70px 50px;
