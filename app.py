@@ -40,7 +40,3 @@
 #     writer = csv.writer(file)
 #     writer.writerow(["Name", "Address"])  # Encabezados de las columnas
 #     writer.writerows(datos)
-
-clientes = []
-
-def agregar_pedido()

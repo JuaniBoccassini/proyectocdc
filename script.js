@@ -39,101 +39,131 @@ faqs.forEach(faq => {
 })
 // Desplegar FAQ
 
-// Validacion formulario tarifas
-let sendBtn = document.getElementById("sendBtn");
+// const payment1 = document.getElementById("payment1").checked;
+// const payment2 = document.getElementById("payment2").checked;
+// const payMethod = document.getElementById("payMethod").value;
 
-sendBtn.addEventListener("click", (event) => {
+// Formulario Cotizacion
+async function calcularCosto(event) {
     event.preventDefault();
 
-    const validateOrg = document.getElementById("validateOrg").value;
-    const validateDest = document.getElementById("validateDest").value;
-    const payment1 = document.getElementById("payment1").checked;
-    const payment2 = document.getElementById("payment2").checked;
-    const payMethod = document.getElementById("payMethod").value;
+    // Obtener valores del formulario
+    const origen = document.getElementById('validateOrg').value;
+    const destino = document.getElementById('validateDest').value;
+    const peso = parseFloat(document.getElementById('peso').value);
+    const cantPaquetes = parseInt(document.getElementById('cantPaquetes').value);
 
-    if (validateOrg === "" || validateDest === "" || payMethod === "" || (!payment1 && !payment2)) {
+    // Espacio para validar tipos de datos
+    // if (!origen || !destino || !peso || !cantPaquetes) {
+    //     Swal.fire({
+    //         icon: 'error',
+    //         html: `<h2 class="tituloSweet">¡Hubo un error!</h2><br><p class="pFormulario">Debes completar todos los campos</p>`,
+    //         color: '#1b0366',
+    //         timer: 5000,
+    //         timerProgressBar: true,
+    //         showConfirmButton: false,
+    //         customClass: { popup: 'tamañoAlertSweet' }
+    //     });
+    //     return;
+    // }
+    // Espacio para validar tipos de datos
+    
+    // Valores fijos
+    const precioCombustible = 1000.00; // Precio promedio de combustible en pesos argentinos
+
+    try {
+        // Geocodificación para obtener coordenadas usando Nominatim
+        const coordsOrigen = await obtenerCoordenadas(origen);
+        const coordsDestino = await obtenerCoordenadas(destino);
+
+        if (!coordsOrigen || !coordsDestino) {
+            Swal.fire({
+                icon: 'error',
+                html: `<h2 class="tituloSweet">¡Error!</h2><br><p class="pFormulario">Error al obtener coordenadas</p>`,
+                color: '#1b0366',
+                timer: 5000,
+                timerProgressBar: true,
+                showConfirmButton: false,
+                customClass: { popup: 'tamañoAlertSweet' }
+            });
+            return;
+        }
+
+        // Calcular la distancia usando OSRM
+        const distancia = await calcularDistancia(coordsOrigen, coordsDestino);
+        if (distancia === null) {
+            Swal.fire({
+                icon: 'error',
+                html: `<h2 class="tituloSweet">¡Error!</h2><br><p class="pFormulario">Error al calcular la distancia</p>`,
+                color: '#1b0366',
+                timer: 5000,
+                timerProgressBar: true,
+                showConfirmButton: false,
+                customClass: { popup: 'tamañoAlertSweet' }
+            });
+            return;
+        }
+
+        // Calcular costos
+        const costoCombustible = distancia * precioCombustible * 0.1; // Ejemplo: 0.1 litros por km 
+        const costoPeajes = calcularPeajes(distancia);
+        const costoTotal = (peso * cantPaquetes) + costoCombustible + costoPeajes;
+
+        // Mostrar el resultado
+        Swal.fire({
+            icon: 'success',
+            html: `<h2 class="tituloSweet">¡Completado!</h2><br><p>El costo estimado de envío es:<br> ${costoTotal.toFixed(2)} pesos</p>`,
+            color: '#1b0366',
+            showConfirmButton: true,
+            customClass: { popup: 'tamañoAlertSweet' }
+        });
+    } catch (error) {
         Swal.fire({
             icon: 'error',
-            html: `
-            <h2 class="tituloSweet">¡Hubo un error!</h2>
-            <br>
-            <p class="pFormulario">Debes completar todos los campos</p>`,
+            html: `<h2 class="tituloSweet">¡Error!</h2><br><p class="pFormulario">Ocurrió un error al calcular el costo</p>`,
             color: '#1b0366',
             timer: 5000,
             timerProgressBar: true,
             showConfirmButton: false,
-            customClass: {
-                popup: 'tamañoAlertSweet',
-            }
+            customClass: { popup: 'tamañoAlertSweet' }
         });
+        console.error('Error:', error);
     }
-});
-// Validacion formulario tarifas
-
-async function calcularCosto() {
-    // Obtener valores del formulario
-    const origen = document.getElementsByName('origen')[0].value;
-    const destino = document.getElementsByName('destino')[0].value;
-    const peso = parseFloat(document.getElementsByName('kg')[0].value);
-    const cantPaquetes = parseInt(document.getElementsByName('cantidadpaquetes')[0].value);
-
-    // Valores fijos
-    const precioCombustible = 1000.00; // Precio promedio de combustible en pesos argentinos
-
-    // Geocodificación para obtener coordenadas usando Nominatim
-    const coordsOrigen = await obtenerCoordenadas(origen);
-    const coordsDestino = await obtenerCoordenadas(destino);
-
-    if (!coordsOrigen || !coordsDestino) {
-        document.getElementById('resultado').innerText = 'Error al obtener coordenadas';
-        return;
-    };
-
-    // Calcular la distancia usando OSRM
-    const distancia = await calcularDistancia(coordsOrigen, coordsDestino);
-
-    // Calcular costos
-    const costoCombustible = distancia * precioCombustible * 0.1; // Ejemplo: 0.1 litros por km 
-    const costoPeajes = 1000; // Suponiendo que tienes una función para esto
-    const costoTotal = (peso * cantPaquetes) + costoCombustible + costoPeajes;
-
-    // Mostrar el resultado
-    Swal.fire({
-        icon: 'success',
-        html: `
-            <h2 class="tituloSweet">¡Completado!</h2>
-            <br>
-            <p>El costo estimado de envío es: ${costoTotal.toFixed(2)} pesos</p>`,
-        color: '#1b0366',
-        showConfirmButton: true,
-        customClass: {
-            popup: 'tamañoAlertSweet',
-        }
-    });
-};
+}
 
 async function obtenerCoordenadas(direccion) {
-    const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(direccion)}`);
-    const data = await response.json();
-    if (data.length > 0) {
-        return { lat: data[0].lat, lon: data[0].lon };
-    } else {
+    try {
+        const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(direccion)}&countrycodes=AR&limit=1`);
+        const data = await response.json();
+        if (data.length > 0) {
+            return { lat: data[0].lat, lon: data[0].lon };
+        } else {
+            return null;
+        }
+    } catch (error) {
+        console.error('Error al obtener coordenadas:', error);
         return null;
-    };
-};
+    }
+}
 
 async function calcularDistancia(origen, destino) {
-    const response = await fetch(`http://router.project-osrm.org/route/v1/driving/${origen.lon},${origen.lat};${destino.lon},${destino.lat}?overview=false`);
-    const data = await response.json();
-    if (data.routes && data.routes.length > 0) {
-        return data.routes[0].distance / 1000; // Convertir a km
-    } else {
+    try {
+        const response = await fetch(`http://router.project-osrm.org/route/v1/driving/${origen.lon},${origen.lat};${destino.lon},${destino.lat}?overview=false`);
+        const data = await response.json();
+        if (data.routes && data.routes.length > 0) {
+            return data.routes[0].distance / 1000; // Convertir a km
+        } else {
+            return null;
+        }
+    } catch (error) {
+        console.error('Error al calcular la distancia:', error);
         return null;
-    };
-};
+    }
+}
 
 function calcularPeajes(distancia) {
-    const costoPorPeaje = 1000; // Ejemplo: 100 pesos por peaje
-    const numPeajes = Math.ceil(distancia / 50); // Ejemplo: un peaje cada 150 km
+    const costoPorPeaje = 1000; // Ejemplo: 1000 pesos por peaje
+    const numPeajes = Math.ceil(distancia / 150); // Ejemplo: un peaje cada 150 km
     return numPeajes * costoPorPeaje;
-};
+}
+// Formulario Cotizacion

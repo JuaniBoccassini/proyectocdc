@@ -387,11 +387,6 @@ body {
     gap: .8rem;
 }
 
-.icons2 svg:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
-}
-
 .icons2 p {
     display: block;
     flex-direction: column;
@@ -703,16 +698,6 @@ label {
     display: block;
     font-size: 18px;
     color: #2f2e2e;
-}
-
-input[type="text"],
-select {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
 }
 
 .submit-button {
