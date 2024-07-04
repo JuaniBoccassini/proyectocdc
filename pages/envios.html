@@ -98,35 +98,35 @@
         <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
             <h1 class="tarifas">Hacé tu envío</h1>
             <div class="cont-cotizador">
-                <form class="cotizador">
+                <form class="cotizador" onsubmit="calcularEnvio(event)">
                     <div class="origen mb-3 p-3">
                         <div>
                             <label for="origen" class="mb-2">Origen</label>
-                            <input type="text" id="" name="" placeholder="Barrio, municipio, provincia" class="input text-white" required>    
+                            <input type="text" required id="" name="origen" placeholder="Barrio, municipio, provincia" class="input text-white">    
                         </div>
                         <div>
-                            <label for="cporigen" class="mb-2">Codigo Postal</label>
-                            <input type="number" id="" name="" placeholder="B9410" class="input-number text-white" required>        
+                            <label for="cpOrigen" class="mb-2">Codigo Postal</label>
+                            <input type="text" id="" name="cpOrigen" placeholder="B9410" class="input-number text-white" required>        
                         </div>
                     </div>
                     <div class="destino mb-3 p-3">
                         <div>
                             <label for="destino" class="mb-2">Destino</label>
-                            <input type="text" id="" name="" placeholder="Barrio, municipio, provincia" class="input text-white" required>    
+                            <input type="text" id="" name="destino" placeholder="Barrio, municipio, provincia" class="input text-white" required>    
                         </div>
                         <div>
-                            <label for="cpdestino" class="mb-2">Codigo Postal</label>
-                            <input type="number" id="" name="" placeholder="C4650" class="input-number text-white" required>        
+                            <label for="cpDestino" class="mb-2">Codigo Postal</label>
+                            <input type="text" id="" name="cpDestino" placeholder="C4650" class="input-number text-white" required>        
                         </div>
                     </div>
                     <div class="peso mb-3 p-3">
                         <div>
-                            <label for="cantbultos" class="text-white">Cantidad de paquetes</label>
-                            <input type="number" id="" name="" class="input-number text-white" required>
+                            <label for="cantPaquetes" class="text-white">Cantidad de paquetes</label>
+                            <input type="number" id="" name="cantPaquetes" class="input-number text-white" required>
                         </div>
                         <div>
-                            <label for="kg" class="text-white">Peso (kg)</label>
-                            <input type="number" step=".1" id="" name="" class="input-number text-white" required>
+                            <label for="peso" class="text-white">Peso (kg)</label>
+                            <input type="number" step=".1" id="" name="peso" class="input-number text-white" required>
                         </div>
                     </div>
                     <div class="pago mb-3 p-3">
@@ -134,16 +134,16 @@
                             <h4 class="text-white fw-light">Desea pagar en</h4>
                             <div class="input-radio">
                                 <input type="radio" id="payment1" name="pago" required>
-                                <label for="pago1" class="text-white">Origen</label>
+                                <label for="pago" class="text-white">Origen</label>
                             </div>
                             <div class="input-radio">
                                 <input type="radio" id="payment2" name="pago" required>
-                                <label for="pago2" class="text-white">Destino</label>
+                                <label for="pago" class="text-white">Destino</label>
                             </div>
                         </div>
                         <div>
                             <label class="text-white" for="metodoDePago">Metodo de pago</label>
-                            <select class="input" name="" id="" required>
+                            <select class="input" name="metodoDePago" id="" required>
                                 <option value="efectivo">Efectivo</option>
                                 <option value="transferencia">Transferencia</option>
                                 <option value="tarjeta">Tarjeta</option>
@@ -165,35 +165,35 @@
         <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
             <h1 class="tarifas">Cotizá y calculá tu tarifa de envios</h1>
             <div class="cont-cotizador">
-                <form class="cotizador" onsubmit="calcularCosto(event)">
+                <form class="cotizador" onsubmit="calcularTarifa(event)">
                     <div class="origen mb-3 p-3">
                         <div>
                             <label for="origen">Origen</label>
-                            <input type="text" required id="validateOrg" name="origen" placeholder="Barrio, municipio, provincia" class="input text-white">    
+                            <input type="text" required id="validateOrg" name="" placeholder="Barrio, municipio, provincia" class="input text-white">    
                         </div>
                         <div>
                             <label for="cporigen">Codigo Postal</label>
-                            <input type="number" required id="validateOrg" name="cporigen" placeholder="9410" class="input text-white">        
+                            <input type="number" required id="validateOrg" name="" placeholder="9410" class="input text-white">        
                         </div>
                     </div>
                     <div class="destino mb-3 p-3">
                         <div>
                             <label for="destino">Destino</label>
-                            <input type="text" required id="validateDest" name="destino" placeholder="Barrio, municipio, provincia" class="input text-white">    
+                            <input type="text" required id="validateDest" name="" placeholder="Barrio, municipio, provincia" class="input text-white">    
                         </div>
                         <div>
                             <label for="cpdestino">Codigo Postal</label>
-                            <input type="number" required id="validateDest" name="cpdestino" placeholder="4650" class="input text-white">        
+                            <input type="number" required id="validateDest" name="" placeholder="4650" class="input text-white">        
                         </div>
                     </div>
                     <div class="peso mb-3 p-3">
                         <div>
                             <label for="cantbultos" class="text-white">Cantidad de paquetes</label>
-                            <input type="number" id="cantPaquetes" name="cantPaquetes" class="input text-white" required>
+                            <input type="number" id="cantPaquetes" name="" class="input text-white" required>
                         </div>
                         <div>
                             <label for="kg" class="text-white">Peso (kg)</label>
-                            <input type="number" step=".1" id="peso" name="peso" class="input text-white" required>
+                            <input type="number" step=".1" id="peso" name="" class="input text-white" required>
                         </div>
                     </div>
                     <div>
