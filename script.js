@@ -148,7 +148,7 @@ async function obtenerCoordenadas(direccion) {
 
 async function calcularDistancia(origen, destino) {
     try {
-        const response = await fetch(`http://router.project-osrm.org/route/v1/driving/${origen.lon},${origen.lat};${destino.lon},${destino.lat}?overview=false`);
+        const response = await fetch(`https://router.project-osrm.org/route/v1/driving/${origen.lon},${origen.lat};${destino.lon},${destino.lat}?overview=false`);
         const data = await response.json();
         if (data.routes && data.routes.length > 0) {
             return data.routes[0].distance / 1000; // Convertir a km
