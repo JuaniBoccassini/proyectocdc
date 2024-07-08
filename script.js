@@ -1,4 +1,4 @@
-// *************************************************Mostrar Menu Responsivo************************************************* \\
+// *************************************************Mostrar menu responsivo************************************************* \\
 const toggleBtn = document.querySelector(".toggle-btn")
 const toggleBtnIcon = document.querySelector(".toggle-btn i")
 const responsiveMenu = document.querySelector(".responsive-menu")
@@ -11,7 +11,7 @@ toggleBtn.onclick = function(){
   ? "fa-solid fa-xmark"
   : "fa-solid fa-bars"
 }
-// *************************************************Mostrar Menu Responsivo************************************************* \\
+// *************************************************Mostrar menu responsivo************************************************* \\
 
 
 // *************************************************Mostrar elementos al scrollear************************************************* \\

@@ -34,7 +34,7 @@ body {
     top: 0;
     left: 0;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     height: var(--navbar-height);
     padding: 0px 3rem;
     align-items: center;
@@ -44,6 +44,7 @@ body {
 
 .navbar {
     display: flex;
+    margin-right: 12rem;
     align-items: center;
 }
 

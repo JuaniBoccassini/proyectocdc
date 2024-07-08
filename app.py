@@ -40,3 +40,10 @@
 #     writer = csv.writer(file)
 #     writer.writerow(["Name", "Address"])  # Encabezados de las columnas
 #     writer.writerows(datos)
+
+jib = "JuanIgnacioBoccassini"
+
+jfk = "JohnFitzgeraldKennedy"
+
+print(len(jib))
+print(len(jfk))
