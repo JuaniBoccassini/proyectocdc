@@ -1,5 +1,288 @@
-@import url(../css/style.css);
+@import url(/css/style.css);
 
 * {
     font-family: "Readex Pro", sans-serif;
+}
+
+.nav {
+    margin: 50px 230px 0;
+    gap: 15px;
+}
+
+h1.tarifas {
+    color: white;
+    margin: 70px 50px;
+    text-shadow: 1px 1px 2px #1ecdd9, 0 0 1em #1ecdd9, 0 0 0.2em #1ecdd9;
+    text-align: center;
+    font-size: 35px;
+}
+
+.cont-envios {
+    border-radius: 50px;
+    padding: 20px;
+    box-shadow: 0px 0px 17px 5px #68F7FF;
+}
+
+.envios {
+    display: flex;
+    flex-direction: column;
+    font-weight: 100;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.form-control-input {
+    width: 40%;
+}
+
+.cont-cotizador {
+    display: flex;
+    justify-content: center;
+}
+
+.cotizador {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50px;
+    padding: 20px;
+    align-items: center;
+    -webkit-box-shadow: 0px 0px 17px 5px #68F7FF; 
+    box-shadow: 0px 0px 17px 5px #68F7FF;
+}
+
+.cotizador > label {
+    font-size: 25px;
+    color: white;
+}
+
+.origen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 12rem;
+}
+
+.origen > div {
+    align-items: center;
+}
+
+.origen > div > label {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 200;
+}
+
+.destino {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 12rem;
+}
+
+.destino > div {
+    align-items: center;
+}
+
+.destino > div > label {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 200;
+    padding-right: 20px;
+}
+
+.pago {
+    display: flex;
+    gap: 12rem;
+
+}
+
+
+.pago > div > label {
+    font-size: 25px;
+    font-weight: 200;
+}
+
+.pago > div > select {
+    color: #ffffff;
+    background: transparent;
+}
+
+.pago > div > select > option {
+    background-color: transparent;
+    color: #000;
+}
+
+.input-radio {
+    display: flex;
+    font-weight: 200;
+    align-items: center;
+    gap: 10px;
+}
+
+.peso {
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+}
+
+.peso > div > label {
+    font-size: 25px;
+    font-weight: 200;
+}
+
+/* imagen */
+
+.imgPedido {
+    padding: 25px 30px;
+    margin-bottom: 25px;
+}
+
+.imgenvios {
+    width: 100%;
+    height: 200px;
+    background-image: url("/media/img/slide1-e1479392467868-removebg-preview.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 60px 0px;
+}
+
+.adjImg {
+    font-size: 10px;
+}
+
+.input {
+    border-radius: 10px;
+    outline: 1px solid #1ecdd9;
+    border: 0;
+    font-size: 15px;
+    font-weight: 100;
+    background-color: transparent;
+    padding: .5rem .8rem;
+    transition: 0.25s;
+    width: 100%;
+}
+
+.input-number {
+    border-radius: 10px;
+    outline: 1px solid #1ecdd9;
+    border: 0;
+    font-size: 15px;
+    font-weight: 100;
+    background-color: transparent;
+    padding: .5rem .8rem;
+    transition: 0.25s;
+    width: 50%;
+}
+
+.input:focus, .input-postal:focus {
+    outline-offset: 5px;
+}
+/* boton formulario */
+.btn-form {
+    text-decoration: none;
+    position: relative;
+    border: none;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    color: #fff;
+    width: 5em;
+    height: 2em;
+    margin: 10px;
+    line-height: 2em;
+    text-align: center;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 300%;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+.btn-form:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+@keyframes ani {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}
+
+.btn-form:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+.btn-form:hover::before {
+    filter: blur(20px);
+}
+
+.btn-form:active {
+    background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+}
+
+@media (max-width: 992px) {
+
+    .header-main {
+        padding: 1.3rem 5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    :root {
+        font-size: 12px;
+    }
+
+    .header-main {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar {
+        position: absolute;
+        display: none;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 17.7rem;
+        justify-content: center;
+        backdrop-filter: blur(10px);
+        box-shadow:0 .5rem 1rem rgba(0, 0, 0, .1);
+        transition: .3s ease;
+    }
+
+    .navbar .links {
+        display: none;
+    }
+
+    .toggle-btn {
+        display: block;
+    }
+
+    .responsive-menu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .responsive-menu {
+        left: 2rem;
+        width: unset;
+    }
 }
